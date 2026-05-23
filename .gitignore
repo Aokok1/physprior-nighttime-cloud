@@ -1,0 +1,33 @@
+# PhysPrior — Physics-Guided Label Correction for Nighttime Cloud Detection
+# Git ignore file
+
+# Checkpoints (large binary files)
+output/checkpoints/
+output/logs/
+*.pth
+*.pt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Data (too large, available on request)
+E:/Data/
+H:/
+*.npz
+*.nc
+
+# Output (checkpoints, logs, audit reports)
+output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Paper (separate repo)
+paper/
