@@ -1,83 +1,111 @@
-# Noise-Label Cloud Detection
+# PhysPrior — physics-guided label correction for nighttime cloud detection
 
-从噪声 CLDMSK 标签中学习夜间云检测——将 CLDMSK 从"坏基线"（42% 准确率）转变为"全球弱监督资源"。
+Code and data release for the manuscript
 
-## 核心思路
+> **Toward Improving Nighttime Cloud Detection Labels: A Physics-Guided
+> One-Directional Correction Approach for VIIRS CLDMSK**
+> Mingyu Chen, Shensen Hu, Weihua Ai, Shuo Ma
+> College of Meteorology and Oceanography, National University of Defense Technology
 
-CLDMSK 在雷达验证点上的准确率仅 42%，但它是**全球覆盖**的——地球上每个 VIIRS 像素都有 CLDMSK 标签。本项目的核心假设：**用 300 个干净的雷达标注样本，可以"净化"2089 个带噪 CLDMSK 标注**。
+## What PhysPrior does
 
-## 三种方法
+NASA's VIIRS CLDMSK cloud mask over land at night confuses radiatively cooled
+surfaces with cloud. PhysPrior corrects that bias **in the label field**, not by
+building another detector: it changes a CLDMSK "cloud" label to "clear" only when
+both conditions hold at the pixel, and it never modifies a CLDMSK "clear" label.
 
-| 方法 | 原理 | 关键参数 |
-|------|------|---------|
-| **Loss Correction** | 用雷达估计 CLDMSK 混淆矩阵，修正 CE 损失 | 混淆矩阵 (4×4) |
-| **Co-Teaching** | 双模型互相筛选"干净"样本，仅用对方认可的数据更新 | forget_rate=0.2 |
-| **SELFIE** | 教师(CLDMSK+雷达) → 净化标签 → 学生(纯净化标签) | confidence_thresh=0.85 |
+| | condition |
+|---|---|
+| 1 | M15 brightness temperature at the pixel, `T15 >= T_th` (warm) |
+| 2 | population standard deviation of M15 in the local 5x5 window, `sigma5 <= sigma_th` (uniform) |
 
-## 项目结构
+The deployed operating point is the **moderate** member of a three-preset family:
+conservative `(266 K, 1.0 K)`, **moderate `(264 K, 1.5 K)`**, aggressive
+`(262 K, 2.0 K)`. The family spans the M15 warm-cloud discriminator range given
+by the MOD35 algorithm-theoretical-basis document. On the 197-point radar
+reference the rule raises direct radar agreement from 44.2% to 69.5% while
+changing 74 labels (62 corrections, 12 over-corrections).
 
-```
-noise-label-cloud/
-├── config.py           # 全局配置（路径、超参）
-├── train.py            # 主入口（--method, --all）
-├── eval.py             # 评估 + 方法对比
-├── data/
-│   ├── dataset.py      # Dataset 类（适配 MT-UNet .npz）
-│   └── noise_analysis.py  # CLDMSK 噪声模式分析
-├── models/
-│   └── mt_unet.py      # MT-UNet + CorrectedLoss
-├── methods/
-│   ├── baseline.py     # 标准训练（对照）
-│   ├── loss_correction.py
-│   ├── coteaching.py
-│   └── selfie.py       # 教师-学生净化框架
-├── output/             # checkpoint + log + 报告
-└── tests/
-```
+## Released artefacts
 
-## 快速开始
+`release/physprior-nighttime-cloud/` (54 files, 3.3 MB) is the package that
+accompanies the manuscript:
+
+| Path | What it is |
+|---|---|
+| `data/reference_labels.csv` | radar-collocated reference labels (station, date, split, radar row/column) |
+| `data/sample_manifest_grp.csv` | per-patch split manifest: all 2,782 samples with station, year, day-of-year, split, overpass group and radar fields |
+| `data/split_grp_manifest.json` | split-construction record (seed, validation fraction, exclusion window, closure counts) |
+| `basemap/*.npz` | the eight station-season DNB composites used as the third input channel |
+| `basemap/basemap_provenance.json` | which scenes entered each composite, under which criterion |
+| `predictions/all_frozen_predictions_grp.json` | per-sample predictions behind every row of Tables I-VI |
+| `predictions/paper_tables_grp.json`, `predictions/derived_tables_grp.json` | table-builder output (confusion matrices, intervals, rule-versus-model agreement) |
+| `code/` | the correction rule, dataset loader, split builder, basemap builder, training entry points, table builders and verification gates |
+
+### Reproducing the reported numbers
 
 ```bash
-# 1. 分析 CLDMSK 噪声模式（必须先做）
-python train.py --analyze
+# 1. every metric and bootstrap interval, from the released predictions
+python code/scripts/rebuild_paper_tables.py
 
-# 2. 运行单个方法
-python train.py --method baseline
-python train.py --method loss_correction
-python train.py --method coteaching
-python train.py --method selfie --teacher-ckpt output/checkpoints/baseline_best.pth
+# 2. forward gate: every value the manuscript asserts must be produced
+python code/scripts/verify_manuscript_numbers.py
 
-# 3. 评估所有方法
-python eval.py
-
-# 4. 一键运行全部
-python train.py --all
+# 3. independent check of the tables, bypassing the builder
+python code/scripts/independent_table_check.py
 ```
 
-## 数据依赖
+## Repository layout
 
-共享 MT-UNet 的数据管线：
+| Path | What it is | Where in the paper |
+|---|---|---|
+| `methods/physical_prior.py` | the correction rule and its three presets | II-B |
+| `methods/loss_correction.py` | Loss Correction baseline (Patrini et al., CVPR 2017); the noise-transition matrix is re-estimated from the 160 training+validation radar pixels (`scripts/redo_loss_correction.py`), never from the test set | II-E, Table I |
+| `methods/coteaching.py` | Co-Teaching baseline (Han et al., NeurIPS 2018) | II-E, Table I |
+| `methods/gce_baseline.py` | GCE baseline (Zhang & Sabuncu, NeurIPS 2018), `q = 0.7` | II-E, Table I |
+| `methods/mixup.py` | Mixup baseline (Zhang et al., ICLR 2018), `alpha = 0.4` | II-E, Table I |
+| `methods/baseline.py` | standard training on raw CLDMSK labels | Table I |
+| `models/mt_unet.py` | the segmentation backbone used for every trained row | II-E |
+| `scripts/build_split_grp.py` | overpass-disjoint, temporally clean split | III-A |
+| `scripts/rebuild_basemap.py` | the eight station-season DNB composites (training and validation scenes only) | II-C |
+| `scripts/train_physprior_5seeds.py`, `scripts/train_coteaching_5seeds.py`, `scripts/train_2x2_ablation.py` | the five-seed runs and the fixed-budget 2x2 ablation | III-F, III-G |
+| `scripts/build_paper_tables.py`, `scripts/rebuild_paper_tables.py` | table generation from the per-sample records | Tables I-VI |
+| `scripts/make_fig1.py`, `scripts/verify_fig1_caption.py` | Fig. 1 and the recomputation of every number in its caption | Fig. 1 |
+| `scripts/verify_manuscript_numbers.py`, `scripts/audit_manuscript_numbers.py`, `scripts/independent_table_check.py` | the forward gate, the reverse audit and an independent table check | - |
+| `determinism.py` | seeding of every entry point and the data loader | II-E |
+| `train.py` | entry point: `python train.py --method {baseline,loss_correction,coteaching,gce,mixup,selfie,...}` | - |
 
-- `E:\Claude code\project\mtunet\pipeline\MiniData\Unet_Dataset\` — .npz 样本
-- `E:\Claude code\project\mtunet\pipeline\norm_stats.npz` — 归一化统计量
+`methods/selfie.py` (a teacher-student label-purification variant) is kept for
+completeness but is **not** used anywhere in the manuscript.
 
-每个 .npz 文件包含：
-- `X_dnb, X_basemap, X_mod` — 3 通道 VIIRS 图像
-- `Y_mask` — CLDMSK 4 类标签（**噪声标签**）
-- `Center_Label` — 雷达验证标签 0/1（**干净标签**，仅 1 像素）
+## Data
 
-## 预期产出
+Released: the radar-collocated reference labels, the per-patch split manifest,
+the eight basemap composites with provenance, and the per-sample prediction
+records behind every reported number.
 
-| 方法 | 预期效果 |
-|------|---------|
-| Baseline | Binary IoU ≈ 0.88-0.90（复现 MT-UNet） |
-| Loss Correction | 在 CLDMSK 系统性偏差场景下优于 Baseline |
-| Co-Teaching | 大噪声比例场景（>50% noisy）下鲁棒 |
-| SELFIE | 学生模型超过教师（证明标签净化有效） |
+Not redistributed: the raw Ka-band radar volumes (institutional restriction; the
+derived reference labels are released instead) and the per-patch `.npz` arrays.
+VIIRS CLDMSK L2 granules are public from the NOAA Comprehensive Large
+Array-Data Stewardship System (CLASS).
 
-## 课题来源
+## Environment
 
-三专家交叉评价（2026-05-19），详见：
+Python 3.12 with PyTorch (CUDA); see `requirements.txt`. The reported runs used a
+single NVIDIA RTX 4060 Laptop GPU, batch size 16, 1,971 training patches of
+128x128.
 
-- `E:\Claude code\project\mtunet\docs\supplement_cloud_detection_topics.md` — 课题提案
-- `E:\Claude code\project\mtunet\docs\plan_1.1_evidential_uncertainty.md` — EDL 课题（可作为 SELFIE 教师增强）
+## Citation
+
+```bibtex
+@article{chen_physprior_nighttime,
+  title  = {Toward Improving Nighttime Cloud Detection Labels: A Physics-Guided
+            One-Directional Correction Approach for VIIRS CLDMSK},
+  author = {Chen, Mingyu and Hu, Shensen and Ai, Weihua and Ma, Shuo},
+  note   = {submitted to IEEE Geoscience and Remote Sensing Letters}
+}
+```
+
+## Contact
+
+Shensen Hu (corresponding author), hushensen18@nudt.edu.cn

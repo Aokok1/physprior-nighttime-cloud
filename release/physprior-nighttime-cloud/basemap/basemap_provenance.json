@@ -1,0 +1,1214 @@
+{
+ "criterion": "train+val scene with >= 95% CLDMSK-clear pixels",
+ "split_tag": "grp",
+ "groups": {
+  "Changsha_Autumn": {
+   "n_selected": 43,
+   "n_candidates": 213,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Changsha_A2019247.1812.npz",
+     "clear_frac": 0.9667
+    },
+    {
+     "fname": "Tensor_Changsha_A2019249.1736.npz",
+     "clear_frac": 0.9957
+    },
+    {
+     "fname": "Tensor_Changsha_A2019254.1742.npz",
+     "clear_frac": 0.9856
+    },
+    {
+     "fname": "Tensor_Changsha_A2019264.1754.npz",
+     "clear_frac": 0.9939
+    },
+    {
+     "fname": "Tensor_Changsha_A2019270.1742.npz",
+     "clear_frac": 0.9996
+    },
+    {
+     "fname": "Tensor_Changsha_A2019271.1718.npz",
+     "clear_frac": 0.996
+    },
+    {
+     "fname": "Tensor_Changsha_A2019271.1900.npz",
+     "clear_frac": 0.9907
+    },
+    {
+     "fname": "Tensor_Changsha_A2019272.1842.npz",
+     "clear_frac": 0.9998
+    },
+    {
+     "fname": "Tensor_Changsha_A2019273.1824.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Changsha_A2019274.1806.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Changsha_A2019291.1748.npz",
+     "clear_frac": 0.9979
+    },
+    {
+     "fname": "Tensor_Changsha_A2019292.1724.npz",
+     "clear_frac": 0.9996
+    },
+    {
+     "fname": "Tensor_Changsha_A2019293.1848.npz",
+     "clear_frac": 0.9793
+    },
+    {
+     "fname": "Tensor_Changsha_A2019301.1800.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Changsha_A2019302.1742.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Changsha_A2019303.1718.npz",
+     "clear_frac": 0.9965
+    },
+    {
+     "fname": "Tensor_Changsha_A2019303.1900.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Changsha_A2019305.1824.npz",
+     "clear_frac": 0.9576
+    },
+    {
+     "fname": "Tensor_Changsha_A2019307.1748.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Changsha_A2019311.1812.npz",
+     "clear_frac": 0.9973
+    },
+    {
+     "fname": "Tensor_Changsha_A2019317.1800.npz",
+     "clear_frac": 0.9827
+    },
+    {
+     "fname": "Tensor_Changsha_A2019318.1742.npz",
+     "clear_frac": 0.9979
+    },
+    {
+     "fname": "Tensor_Changsha_A2020296.1848.npz",
+     "clear_frac": 0.9998
+    },
+    {
+     "fname": "Tensor_Changsha_A2020311.1724.npz",
+     "clear_frac": 0.9803
+    },
+    {
+     "fname": "Tensor_Changsha_A2020312.1848.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Changsha_A2020313.1830.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Changsha_A2020314.1812.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Changsha_A2020315.1754.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Changsha_A2020316.1730.npz",
+     "clear_frac": 0.9996
+    },
+    {
+     "fname": "Tensor_Changsha_A2020317.1854.npz",
+     "clear_frac": 0.9989
+    },
+    {
+     "fname": "Tensor_Changsha_A2020318.1836.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Changsha_A2020319.1818.npz",
+     "clear_frac": 0.9992
+    },
+    {
+     "fname": "Tensor_Changsha_A2022270.1830.npz",
+     "clear_frac": 0.9786
+    },
+    {
+     "fname": "Tensor_Changsha_A2022271.1812.npz",
+     "clear_frac": 0.9921
+    },
+    {
+     "fname": "Tensor_Changsha_A2022272.1754.npz",
+     "clear_frac": 0.9933
+    },
+    {
+     "fname": "Tensor_Changsha_A2022273.1736.npz",
+     "clear_frac": 0.953
+    },
+    {
+     "fname": "Tensor_Changsha_A2023288.1848.npz",
+     "clear_frac": 0.9997
+    },
+    {
+     "fname": "Tensor_Changsha_A2023290.1812.npz",
+     "clear_frac": 0.9984
+    },
+    {
+     "fname": "Tensor_Changsha_A2023295.1818.npz",
+     "clear_frac": 0.9982
+    },
+    {
+     "fname": "Tensor_Changsha_A2023325.1712.npz",
+     "clear_frac": 0.9998
+    },
+    {
+     "fname": "Tensor_Changsha_A2023326.1836.npz",
+     "clear_frac": 0.952
+    },
+    {
+     "fname": "Tensor_Changsha_A2023330.1900.npz",
+     "clear_frac": 0.9847
+    },
+    {
+     "fname": "Tensor_Changsha_A2023331.1842.npz",
+     "clear_frac": 0.9996
+    }
+   ]
+  },
+  "Changsha_Spring": {
+   "n_selected": 22,
+   "n_candidates": 225,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Changsha_A2019069.1848.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Changsha_A2019095.1718.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Changsha_A2019095.1900.npz",
+     "clear_frac": 0.9983
+    },
+    {
+     "fname": "Tensor_Changsha_A2019096.1842.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Changsha_A2019097.1824.npz",
+     "clear_frac": 0.9999
+    },
+    {
+     "fname": "Tensor_Changsha_A2019106.1712.npz",
+     "clear_frac": 0.9944
+    },
+    {
+     "fname": "Tensor_Changsha_A2019106.1854.npz",
+     "clear_frac": 0.9736
+    },
+    {
+     "fname": "Tensor_Changsha_A2019122.1712.npz",
+     "clear_frac": 0.9808
+    },
+    {
+     "fname": "Tensor_Changsha_A2019122.1854.npz",
+     "clear_frac": 0.9938
+    },
+    {
+     "fname": "Tensor_Changsha_A2019129.1824.npz",
+     "clear_frac": 0.9923
+    },
+    {
+     "fname": "Tensor_Changsha_A2019131.1748.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Changsha_A2020074.1812.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Changsha_A2020079.1818.npz",
+     "clear_frac": 0.9999
+    },
+    {
+     "fname": "Tensor_Changsha_A2020098.1900.npz",
+     "clear_frac": 0.9823
+    },
+    {
+     "fname": "Tensor_Changsha_A2020099.1842.npz",
+     "clear_frac": 0.9694
+    },
+    {
+     "fname": "Tensor_Changsha_A2025083.1748.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Changsha_A2025084.1724.npz",
+     "clear_frac": 0.9924
+    },
+    {
+     "fname": "Tensor_Changsha_A2025085.1848.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Changsha_A2025103.1812.npz",
+     "clear_frac": 0.9971
+    },
+    {
+     "fname": "Tensor_Changsha_A2025104.1754.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Changsha_A2025131.1748.npz",
+     "clear_frac": 0.9982
+    },
+    {
+     "fname": "Tensor_Changsha_A2025133.1848.npz",
+     "clear_frac": 0.9987
+    }
+   ]
+  },
+  "Changsha_Summer": {
+   "n_selected": 19,
+   "n_candidates": 171,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Changsha_A2019154.1712.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2019154.1854.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2019165.1848.npz",
+     "clear_frac": 0.9985
+    },
+    {
+     "fname": "Tensor_Changsha_A2019204.1818.npz",
+     "clear_frac": 0.9945
+    },
+    {
+     "fname": "Tensor_Changsha_A2019205.1800.npz",
+     "clear_frac": 0.9916
+    },
+    {
+     "fname": "Tensor_Changsha_A2019207.1718.npz",
+     "clear_frac": 0.9928
+    },
+    {
+     "fname": "Tensor_Changsha_A2019209.1824.npz",
+     "clear_frac": 0.9827
+    },
+    {
+     "fname": "Tensor_Changsha_A2019210.1806.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2019215.1812.npz",
+     "clear_frac": 0.9852
+    },
+    {
+     "fname": "Tensor_Changsha_A2019217.1736.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2019227.1748.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2019230.1830.npz",
+     "clear_frac": 0.9639
+    },
+    {
+     "fname": "Tensor_Changsha_A2019231.1812.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2019233.1736.npz",
+     "clear_frac": 0.9901
+    },
+    {
+     "fname": "Tensor_Changsha_A2019236.1818.npz",
+     "clear_frac": 0.9591
+    },
+    {
+     "fname": "Tensor_Changsha_A2020215.1724.npz",
+     "clear_frac": 0.9722
+    },
+    {
+     "fname": "Tensor_Changsha_A2020240.1800.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2025166.1830.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Changsha_A2025167.1812.npz",
+     "clear_frac": 0.9999
+    }
+   ]
+  },
+  "Changsha_Winter": {
+   "n_selected": 14,
+   "n_candidates": 143,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Changsha_A2019022.1830.npz",
+     "clear_frac": 0.9996
+    },
+    {
+     "fname": "Tensor_Changsha_A2019340.1724.npz",
+     "clear_frac": 0.9961
+    },
+    {
+     "fname": "Tensor_Changsha_A2019341.1848.npz",
+     "clear_frac": 0.9979
+    },
+    {
+     "fname": "Tensor_Changsha_A2019343.1812.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Changsha_A2019344.1754.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Changsha_A2019345.1730.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Changsha_A2019346.1712.npz",
+     "clear_frac": 0.9859
+    },
+    {
+     "fname": "Tensor_Changsha_A2019346.1854.npz",
+     "clear_frac": 0.9985
+    },
+    {
+     "fname": "Tensor_Changsha_A2020007.1724.npz",
+     "clear_frac": 0.9873
+    },
+    {
+     "fname": "Tensor_Changsha_A2020050.1718.npz",
+     "clear_frac": 0.9999
+    },
+    {
+     "fname": "Tensor_Changsha_A2020050.1900.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Changsha_A2020356.1824.npz",
+     "clear_frac": 0.9982
+    },
+    {
+     "fname": "Tensor_Changsha_A2020359.1724.npz",
+     "clear_frac": 0.9982
+    },
+    {
+     "fname": "Tensor_Changsha_A2020360.1848.npz",
+     "clear_frac": 0.9999
+    }
+   ]
+  },
+  "Longmen_Autumn": {
+   "n_selected": 65,
+   "n_candidates": 445,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Longmen_A2019262.1830.npz",
+     "clear_frac": 0.9845
+    },
+    {
+     "fname": "Tensor_Longmen_A2019263.1812.npz",
+     "clear_frac": 0.9967
+    },
+    {
+     "fname": "Tensor_Longmen_A2019264.1754.npz",
+     "clear_frac": 0.9946
+    },
+    {
+     "fname": "Tensor_Longmen_A2019265.1736.npz",
+     "clear_frac": 0.9915
+    },
+    {
+     "fname": "Tensor_Longmen_A2019267.1836.npz",
+     "clear_frac": 0.9739
+    },
+    {
+     "fname": "Tensor_Longmen_A2019268.1818.npz",
+     "clear_frac": 0.9799
+    },
+    {
+     "fname": "Tensor_Longmen_A2019269.1800.npz",
+     "clear_frac": 0.9971
+    },
+    {
+     "fname": "Tensor_Longmen_A2019270.1742.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Longmen_A2019271.1724.npz",
+     "clear_frac": 0.9573
+    },
+    {
+     "fname": "Tensor_Longmen_A2019274.1806.npz",
+     "clear_frac": 0.9998
+    },
+    {
+     "fname": "Tensor_Longmen_A2019276.1730.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Longmen_A2019291.1748.npz",
+     "clear_frac": 0.9733
+    },
+    {
+     "fname": "Tensor_Longmen_A2019292.1730.npz",
+     "clear_frac": 0.9726
+    },
+    {
+     "fname": "Tensor_Longmen_A2019293.1848.npz",
+     "clear_frac": 0.9755
+    },
+    {
+     "fname": "Tensor_Longmen_A2019308.1730.npz",
+     "clear_frac": 0.9923
+    },
+    {
+     "fname": "Tensor_Longmen_A2019309.1848.npz",
+     "clear_frac": 0.9807
+    },
+    {
+     "fname": "Tensor_Longmen_A2019311.1812.npz",
+     "clear_frac": 0.9908
+    },
+    {
+     "fname": "Tensor_Longmen_A2019312.1754.npz",
+     "clear_frac": 0.9866
+    },
+    {
+     "fname": "Tensor_Longmen_A2019313.1736.npz",
+     "clear_frac": 0.9936
+    },
+    {
+     "fname": "Tensor_Longmen_A2019315.1836.npz",
+     "clear_frac": 0.992
+    },
+    {
+     "fname": "Tensor_Longmen_A2019317.1800.npz",
+     "clear_frac": 0.9513
+    },
+    {
+     "fname": "Tensor_Longmen_A2019318.1742.npz",
+     "clear_frac": 0.9958
+    },
+    {
+     "fname": "Tensor_Longmen_A2019319.1724.npz",
+     "clear_frac": 0.9908
+    },
+    {
+     "fname": "Tensor_Longmen_A2019321.1824.npz",
+     "clear_frac": 0.9971
+    },
+    {
+     "fname": "Tensor_Longmen_A2019324.1730.npz",
+     "clear_frac": 0.9887
+    },
+    {
+     "fname": "Tensor_Longmen_A2019325.1848.npz",
+     "clear_frac": 0.9824
+    },
+    {
+     "fname": "Tensor_Longmen_A2019326.1830.npz",
+     "clear_frac": 0.9984
+    },
+    {
+     "fname": "Tensor_Longmen_A2019327.1812.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Longmen_A2019333.1800.npz",
+     "clear_frac": 0.9756
+    },
+    {
+     "fname": "Tensor_Longmen_A2021278.1824.npz",
+     "clear_frac": 0.9581
+    },
+    {
+     "fname": "Tensor_Longmen_A2021279.1806.npz",
+     "clear_frac": 0.9531
+    },
+    {
+     "fname": "Tensor_Longmen_A2021310.1824.npz",
+     "clear_frac": 0.9638
+    },
+    {
+     "fname": "Tensor_Longmen_A2021314.1712.npz",
+     "clear_frac": 0.9589
+    },
+    {
+     "fname": "Tensor_Longmen_A2021327.1806.npz",
+     "clear_frac": 0.9568
+    },
+    {
+     "fname": "Tensor_Longmen_A2021329.1730.npz",
+     "clear_frac": 0.9934
+    },
+    {
+     "fname": "Tensor_Longmen_A2021331.1830.npz",
+     "clear_frac": 0.9643
+    },
+    {
+     "fname": "Tensor_Longmen_A2021332.1812.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Longmen_A2021334.1736.npz",
+     "clear_frac": 0.9966
+    },
+    {
+     "fname": "Tensor_Longmen_A2022245.1800.npz",
+     "clear_frac": 0.9998
+    },
+    {
+     "fname": "Tensor_Longmen_A2022268.1730.npz",
+     "clear_frac": 0.9746
+    },
+    {
+     "fname": "Tensor_Longmen_A2022275.1836.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2022276.1818.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2022287.1812.npz",
+     "clear_frac": 0.9977
+    },
+    {
+     "fname": "Tensor_Longmen_A2022315.1748.npz",
+     "clear_frac": 0.9909
+    },
+    {
+     "fname": "Tensor_Longmen_A2022316.1730.npz",
+     "clear_frac": 0.9731
+    },
+    {
+     "fname": "Tensor_Longmen_A2022324.1818.npz",
+     "clear_frac": 0.9717
+    },
+    {
+     "fname": "Tensor_Longmen_A2023263.1818.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Longmen_A2023273.1830.npz",
+     "clear_frac": 0.963
+    },
+    {
+     "fname": "Tensor_Longmen_A2023297.1742.npz",
+     "clear_frac": 0.9725
+    },
+    {
+     "fname": "Tensor_Longmen_A2023324.1736.npz",
+     "clear_frac": 0.9971
+    },
+    {
+     "fname": "Tensor_Longmen_A2023327.1818.npz",
+     "clear_frac": 0.9965
+    },
+    {
+     "fname": "Tensor_Longmen_A2023329.1742.npz",
+     "clear_frac": 0.9975
+    },
+    {
+     "fname": "Tensor_Longmen_A2023331.1842.npz",
+     "clear_frac": 0.99
+    },
+    {
+     "fname": "Tensor_Longmen_A2024245.1812.npz",
+     "clear_frac": 0.9572
+    },
+    {
+     "fname": "Tensor_Longmen_A2024273.1748.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Longmen_A2024288.1806.npz",
+     "clear_frac": 0.9553
+    },
+    {
+     "fname": "Tensor_Longmen_A2024305.1748.npz",
+     "clear_frac": 0.9962
+    },
+    {
+     "fname": "Tensor_Longmen_A2025270.1742.npz",
+     "clear_frac": 0.9541
+    },
+    {
+     "fname": "Tensor_Longmen_A2025276.1730.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2025281.1736.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2025282.1718.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2025284.1824.npz",
+     "clear_frac": 0.9786
+    },
+    {
+     "fname": "Tensor_Longmen_A2025290.1812.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2025332.1824.npz",
+     "clear_frac": 0.9962
+    },
+    {
+     "fname": "Tensor_Longmen_A2025333.1806.npz",
+     "clear_frac": 0.9946
+    }
+   ]
+  },
+  "Longmen_Spring": {
+   "n_selected": 29,
+   "n_candidates": 408,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Longmen_A2019070.1830.npz",
+     "clear_frac": 0.9899
+    },
+    {
+     "fname": "Tensor_Longmen_A2021083.1742.npz",
+     "clear_frac": 0.9996
+    },
+    {
+     "fname": "Tensor_Longmen_A2021102.1824.npz",
+     "clear_frac": 0.9733
+    },
+    {
+     "fname": "Tensor_Longmen_A2022063.1812.npz",
+     "clear_frac": 0.9965
+    },
+    {
+     "fname": "Tensor_Longmen_A2022067.1836.npz",
+     "clear_frac": 0.9982
+    },
+    {
+     "fname": "Tensor_Longmen_A2022093.1848.npz",
+     "clear_frac": 0.9952
+    },
+    {
+     "fname": "Tensor_Longmen_A2022094.1830.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2022097.1736.npz",
+     "clear_frac": 0.9788
+    },
+    {
+     "fname": "Tensor_Longmen_A2022099.1836.npz",
+     "clear_frac": 0.9929
+    },
+    {
+     "fname": "Tensor_Longmen_A2022100.1818.npz",
+     "clear_frac": 0.9964
+    },
+    {
+     "fname": "Tensor_Longmen_A2022101.1800.npz",
+     "clear_frac": 0.9554
+    },
+    {
+     "fname": "Tensor_Longmen_A2023060.1824.npz",
+     "clear_frac": 0.9928
+    },
+    {
+     "fname": "Tensor_Longmen_A2023061.1806.npz",
+     "clear_frac": 0.9515
+    },
+    {
+     "fname": "Tensor_Longmen_A2023063.1730.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Longmen_A2023064.1712.npz",
+     "clear_frac": 0.9977
+    },
+    {
+     "fname": "Tensor_Longmen_A2023066.1812.npz",
+     "clear_frac": 0.998
+    },
+    {
+     "fname": "Tensor_Longmen_A2023074.1724.npz",
+     "clear_frac": 0.9913
+    },
+    {
+     "fname": "Tensor_Longmen_A2023148.1736.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2023149.1718.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2025078.1742.npz",
+     "clear_frac": 0.9699
+    },
+    {
+     "fname": "Tensor_Longmen_A2025079.1724.npz",
+     "clear_frac": 0.989
+    },
+    {
+     "fname": "Tensor_Longmen_A2025081.1824.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Longmen_A2025082.1806.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2025083.1748.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Longmen_A2025084.1730.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Longmen_A2025091.1836.npz",
+     "clear_frac": 0.9862
+    },
+    {
+     "fname": "Tensor_Longmen_A2025092.1818.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Longmen_A2025093.1800.npz",
+     "clear_frac": 0.9945
+    },
+    {
+     "fname": "Tensor_Longmen_A2025132.1730.npz",
+     "clear_frac": 0.9965
+    }
+   ]
+  },
+  "Longmen_Summer": {
+   "n_selected": 16,
+   "n_candidates": 433,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Longmen_A2021194.1800.npz",
+     "clear_frac": 0.9935
+    },
+    {
+     "fname": "Tensor_Longmen_A2022191.1812.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2022192.1754.npz",
+     "clear_frac": 0.9707
+    },
+    {
+     "fname": "Tensor_Longmen_A2022193.1736.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2022202.1806.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2022203.1748.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2022204.1730.npz",
+     "clear_frac": 0.9935
+    },
+    {
+     "fname": "Tensor_Longmen_A2022205.1848.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2022234.1806.npz",
+     "clear_frac": 0.9839
+    },
+    {
+     "fname": "Tensor_Longmen_A2023188.1824.npz",
+     "clear_frac": 0.9505
+    },
+    {
+     "fname": "Tensor_Longmen_A2023189.1806.npz",
+     "clear_frac": 0.9889
+    },
+    {
+     "fname": "Tensor_Longmen_A2023190.1748.npz",
+     "clear_frac": 1.0
+    },
+    {
+     "fname": "Tensor_Longmen_A2024186.1818.npz",
+     "clear_frac": 0.9926
+    },
+    {
+     "fname": "Tensor_Longmen_A2024187.1800.npz",
+     "clear_frac": 0.9996
+    },
+    {
+     "fname": "Tensor_Longmen_A2024215.1736.npz",
+     "clear_frac": 0.9559
+    },
+    {
+     "fname": "Tensor_Longmen_A2024239.1824.npz",
+     "clear_frac": 0.9581
+    }
+   ]
+  },
+  "Longmen_Winter": {
+   "n_selected": 78,
+   "n_candidates": 427,
+   "clear_frac_min": 0.95,
+   "split_tag": "grp",
+   "sources": [
+    {
+     "fname": "Tensor_Longmen_A2019022.1830.npz",
+     "clear_frac": 0.9992
+    },
+    {
+     "fname": "Tensor_Longmen_A2019023.1812.npz",
+     "clear_frac": 0.9957
+    },
+    {
+     "fname": "Tensor_Longmen_A2019026.1718.npz",
+     "clear_frac": 0.9977
+    },
+    {
+     "fname": "Tensor_Longmen_A2019340.1730.npz",
+     "clear_frac": 0.9949
+    },
+    {
+     "fname": "Tensor_Longmen_A2019341.1706.npz",
+     "clear_frac": 0.9846
+    },
+    {
+     "fname": "Tensor_Longmen_A2019341.1848.npz",
+     "clear_frac": 0.9852
+    },
+    {
+     "fname": "Tensor_Longmen_A2019344.1754.npz",
+     "clear_frac": 0.9988
+    },
+    {
+     "fname": "Tensor_Longmen_A2019345.1736.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Longmen_A2019347.1836.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2019348.1818.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Longmen_A2019359.1812.npz",
+     "clear_frac": 0.9518
+    },
+    {
+     "fname": "Tensor_Longmen_A2019361.1736.npz",
+     "clear_frac": 0.9972
+    },
+    {
+     "fname": "Tensor_Longmen_A2021001.1818.npz",
+     "clear_frac": 0.9961
+    },
+    {
+     "fname": "Tensor_Longmen_A2021002.1800.npz",
+     "clear_frac": 0.9974
+    },
+    {
+     "fname": "Tensor_Longmen_A2021017.1818.npz",
+     "clear_frac": 0.9944
+    },
+    {
+     "fname": "Tensor_Longmen_A2021018.1800.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Longmen_A2021028.1812.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Longmen_A2021030.1736.npz",
+     "clear_frac": 0.9995
+    },
+    {
+     "fname": "Tensor_Longmen_A2021031.1712.npz",
+     "clear_frac": 0.9715
+    },
+    {
+     "fname": "Tensor_Longmen_A2021032.1836.npz",
+     "clear_frac": 0.9929
+    },
+    {
+     "fname": "Tensor_Longmen_A2021033.1818.npz",
+     "clear_frac": 0.9777
+    },
+    {
+     "fname": "Tensor_Longmen_A2021034.1800.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Longmen_A2021035.1742.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2021037.1842.npz",
+     "clear_frac": 0.988
+    },
+    {
+     "fname": "Tensor_Longmen_A2021045.1754.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Longmen_A2021046.1736.npz",
+     "clear_frac": 0.9857
+    },
+    {
+     "fname": "Tensor_Longmen_A2021048.1836.npz",
+     "clear_frac": 0.9941
+    },
+    {
+     "fname": "Tensor_Longmen_A2021049.1818.npz",
+     "clear_frac": 0.9748
+    },
+    {
+     "fname": "Tensor_Longmen_A2021050.1800.npz",
+     "clear_frac": 0.9988
+    },
+    {
+     "fname": "Tensor_Longmen_A2021054.1824.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2021335.1718.npz",
+     "clear_frac": 0.987
+    },
+    {
+     "fname": "Tensor_Longmen_A2021337.1818.npz",
+     "clear_frac": 0.9974
+    },
+    {
+     "fname": "Tensor_Longmen_A2021338.1800.npz",
+     "clear_frac": 0.9655
+    },
+    {
+     "fname": "Tensor_Longmen_A2021340.1724.npz",
+     "clear_frac": 0.9974
+    },
+    {
+     "fname": "Tensor_Longmen_A2021343.1806.npz",
+     "clear_frac": 0.9993
+    },
+    {
+     "fname": "Tensor_Longmen_A2021347.1830.npz",
+     "clear_frac": 0.9878
+    },
+    {
+     "fname": "Tensor_Longmen_A2021352.1836.npz",
+     "clear_frac": 0.9661
+    },
+    {
+     "fname": "Tensor_Longmen_A2021358.1824.npz",
+     "clear_frac": 0.95
+    },
+    {
+     "fname": "Tensor_Longmen_A2022003.1836.npz",
+     "clear_frac": 0.9964
+    },
+    {
+     "fname": "Tensor_Longmen_A2022007.1724.npz",
+     "clear_frac": 0.9507
+    },
+    {
+     "fname": "Tensor_Longmen_A2022056.1842.npz",
+     "clear_frac": 0.9967
+    },
+    {
+     "fname": "Tensor_Longmen_A2022353.1736.npz",
+     "clear_frac": 0.9932
+    },
+    {
+     "fname": "Tensor_Longmen_A2022355.1836.npz",
+     "clear_frac": 0.9964
+    },
+    {
+     "fname": "Tensor_Longmen_A2022358.1742.npz",
+     "clear_frac": 0.998
+    },
+    {
+     "fname": "Tensor_Longmen_A2023046.1748.npz",
+     "clear_frac": 0.9913
+    },
+    {
+     "fname": "Tensor_Longmen_A2023052.1736.npz",
+     "clear_frac": 0.9989
+    },
+    {
+     "fname": "Tensor_Longmen_A2023053.1718.npz",
+     "clear_frac": 0.9951
+    },
+    {
+     "fname": "Tensor_Longmen_A2023054.1836.npz",
+     "clear_frac": 0.9988
+    },
+    {
+     "fname": "Tensor_Longmen_A2023057.1742.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Longmen_A2023058.1724.npz",
+     "clear_frac": 0.999
+    },
+    {
+     "fname": "Tensor_Longmen_A2023059.1842.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2023358.1836.npz",
+     "clear_frac": 0.9681
+    },
+    {
+     "fname": "Tensor_Longmen_A2024003.1848.npz",
+     "clear_frac": 0.9828
+    },
+    {
+     "fname": "Tensor_Longmen_A2024014.1842.npz",
+     "clear_frac": 0.9774
+    },
+    {
+     "fname": "Tensor_Longmen_A2024015.1824.npz",
+     "clear_frac": 0.9991
+    },
+    {
+     "fname": "Tensor_Longmen_A2024018.1730.npz",
+     "clear_frac": 0.996
+    },
+    {
+     "fname": "Tensor_Longmen_A2024041.1836.npz",
+     "clear_frac": 0.9976
+    },
+    {
+     "fname": "Tensor_Longmen_A2024042.1818.npz",
+     "clear_frac": 0.9996
+    },
+    {
+     "fname": "Tensor_Longmen_A2024044.1742.npz",
+     "clear_frac": 0.9966
+    },
+    {
+     "fname": "Tensor_Longmen_A2024337.1748.npz",
+     "clear_frac": 0.9994
+    },
+    {
+     "fname": "Tensor_Longmen_A2024351.1824.npz",
+     "clear_frac": 0.9927
+    },
+    {
+     "fname": "Tensor_Longmen_A2024353.1748.npz",
+     "clear_frac": 0.993
+    },
+    {
+     "fname": "Tensor_Longmen_A2024354.1730.npz",
+     "clear_frac": 0.9874
+    },
+    {
+     "fname": "Tensor_Longmen_A2024355.1848.npz",
+     "clear_frac": 0.9644
+    },
+    {
+     "fname": "Tensor_Longmen_A2024356.1830.npz",
+     "clear_frac": 0.9926
+    },
+    {
+     "fname": "Tensor_Longmen_A2024361.1836.npz",
+     "clear_frac": 0.9641
+    },
+    {
+     "fname": "Tensor_Longmen_A2024363.1800.npz",
+     "clear_frac": 0.9956
+    },
+    {
+     "fname": "Tensor_Longmen_A2024364.1742.npz",
+     "clear_frac": 0.9989
+    },
+    {
+     "fname": "Tensor_Longmen_A2025040.1754.npz",
+     "clear_frac": 0.9984
+    },
+    {
+     "fname": "Tensor_Longmen_A2025041.1736.npz",
+     "clear_frac": 0.9713
+    },
+    {
+     "fname": "Tensor_Longmen_A2025340.1730.npz",
+     "clear_frac": 0.9951
+    },
+    {
+     "fname": "Tensor_Longmen_A2025341.1712.npz",
+     "clear_frac": 0.9662
+    },
+    {
+     "fname": "Tensor_Longmen_A2025341.1854.npz",
+     "clear_frac": 0.9591
+    },
+    {
+     "fname": "Tensor_Longmen_A2025342.1836.npz",
+     "clear_frac": 0.9858
+    },
+    {
+     "fname": "Tensor_Longmen_A2025343.1818.npz",
+     "clear_frac": 0.9627
+    },
+    {
+     "fname": "Tensor_Longmen_A2025348.1824.npz",
+     "clear_frac": 0.9926
+    },
+    {
+     "fname": "Tensor_Longmen_A2025354.1812.npz",
+     "clear_frac": 0.9592
+    },
+    {
+     "fname": "Tensor_Longmen_A2025362.1718.npz",
+     "clear_frac": 0.9883
+    }
+   ]
+  }
+ }
+}

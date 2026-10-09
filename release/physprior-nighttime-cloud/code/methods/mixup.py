@@ -1,12 +1,14 @@
-"""Loss Correction method: use estimated noise matrix to correct CE loss.
+"""Mixup baseline: noise-robust regularization via sample interpolation.
 
-Forward correction: P_corrected = T @ P_predicted
-where T is the noise transition matrix P(Radar | CLDMSK).
+Mixup (Zhang et al. ICLR 2018) trains on convex combinations of sample pairs:
+  x_mix = λ * x_i + (1-λ) * x_j
+  y_mix = λ * y_i + (1-λ) * y_j
 
-Key insight: instead of trusting CLDMSK labels directly, we "undo" their
-known biases using the confusion matrix estimated from radar pixels.
+For noisy labels, Mixup acts as implicit label smoothing — when a noisy sample
+is mixed with a clean one, the interpolated label reduces the noise impact.
+
+Key advantage: no noise rate estimation needed, zero hyperparameter overhead.
 """
-import copy
 import os
 import time
 import torch
@@ -16,28 +18,22 @@ from torch.optim import AdamW
 from torch.optim.lr_scheduler import CosineAnnealingWarmRestarts
 
 from config import train_cfg, model_cfg, CHECKPOINT_DIR, LOG_DIR
-from models.mt_unet import MT_UNet, CorrectedLoss
+from models.mt_unet import MT_UNet, MT_Loss
 from methods.baseline import EarlyStopping, compute_binary_metrics
 
 
-class LossCorrectionTrainer:
-    """Train with noise-transition-matrix-corrected loss."""
+class MixupTrainer:
+    """MT-UNet training with Mixup augmentation for noise robustness."""
 
-    def __init__(self, train_loader, val_loader, transition_matrix: np.ndarray,
-                 device=None):
+    def __init__(self, train_loader, val_loader, alpha=0.4, device=None):
         self.train_loader = train_loader
         self.val_loader = val_loader
-        self.transition_matrix = transition_matrix
+        self.alpha = alpha  # Beta distribution parameter
         self.device = device or torch.device(
             "cuda" if torch.cuda.is_available() else "cpu"
         )
         self.model = None
-        self.optimizer = None
-        self.scheduler = None
-        self.criterion = None
         self.best_val_loss = float("inf")
-        self.best_radar_acc = 0.0
-        self.best_state = None
 
     def setup(self):
         self.model = MT_UNet(
@@ -45,12 +41,9 @@ class LossCorrectionTrainer:
             in_channels=model_cfg.in_channels,
             mask_classes=model_cfg.mask_classes,
             use_film=model_cfg.use_film,
-            use_evidential=False,
         ).to(self.device)
 
-        T = torch.from_numpy(self.transition_matrix).float().to(self.device)
-        self.criterion = CorrectedLoss(
-            transition_matrix=T,
+        self.criterion = MT_Loss(
             weight_center=train_cfg.weight_center,
             dice_weight=train_cfg.dice_weight,
         ).to(self.device)
@@ -65,6 +58,26 @@ class LossCorrectionTrainer:
             eta_min=1e-6,
         )
 
+    def _mixup_data(self, x, y_mask, y_height):
+        """Apply Mixup to image, mask, and height tensors."""
+        lam = np.random.beta(self.alpha, self.alpha)
+        batch_size = x.size(0)
+        # Random permutation for pairing
+        index = torch.randperm(batch_size, device=x.device)
+
+        x_mix = lam * x + (1 - lam) * x[index]
+        # For segmentation masks: use soft labels (probability maps)
+        y_mask_onehot = torch.zeros(
+            batch_size, model_cfg.mask_classes, *y_mask.shape[1:],
+            device=y_mask.device, dtype=torch.float32
+        ).scatter_(1, y_mask.unsqueeze(1), 1.0)
+        y_mask_soft = lam * y_mask_onehot + (1 - lam) * y_mask_onehot[index]
+
+        # Height: linear interpolation
+        y_height_mix = lam * y_height + (1 - lam) * y_height[index]
+
+        return x_mix, y_mask_soft, y_height_mix, lam, index
+
     def train_epoch(self, epoch):
         self.model.train()
         sum_loss = 0.0
@@ -77,11 +90,60 @@ class LossCorrectionTrainer:
             radar_loc = batch["radar_loc"].to(self.device)
             center = batch["center_label"].to(self.device)
 
-            self.optimizer.zero_grad()
-            pred_mask, pred_hgt = self.model(x, moon_phase=moon, solar_zenith=sza)
-            loss, _, _, _ = self.criterion(
-                pred_mask, y_mask, radar_loc, center
+            # Apply Mixup
+            x_mix, y_mask_soft, y_height_mix, lam, idx = self._mixup_data(
+                x, y_mask, y_height
             )
+
+            # Mix radar_loc and center: use original (not mixed) for radar loss
+            # Radar positions don't make physical sense when mixed
+
+            self.optimizer.zero_grad()
+            pred_mask, pred_hgt = self.model(x_mix, moon_phase=moon, solar_zenith=sza)
+
+            # Soft-label CE loss (cross-entropy with probability targets)
+            log_probs = torch.log_softmax(pred_mask, dim=1)
+            loss_ce = -(y_mask_soft * log_probs).sum(dim=1).mean()
+
+            # Dice loss on hard labels (use original, not mixed)
+            from models.mt_unet import DiceLoss
+            dice_fn = DiceLoss()
+            loss_dice = dice_fn(pred_mask, y_mask)
+
+            # Height loss
+            valid = (y_height_mix != -1.0)
+            if valid.sum() > 0:
+                loss_height = nn.functional.mse_loss(
+                    pred_hgt[valid], y_height_mix[valid]
+                )
+            else:
+                loss_height = torch.tensor(0.0, device=x.device)
+
+            # Radar center loss (on original samples only)
+            loss_center = torch.tensor(0.0, device=x.device)
+            valid_idx = ~torch.isnan(center)
+            if valid_idx.sum() > 0:
+                probs = torch.softmax(pred_mask[:x.size(0)], dim=1)
+                p_cloud = (probs[:, 2, :, :] + probs[:, 3, :, :]).clamp(1e-6, 1 - 1e-6)
+                v_locs = radar_loc[valid_idx]
+                v_labels = center[valid_idx].float()
+                H, W = y_mask.shape[1], y_mask.shape[2]
+                loss_sum = 0.0
+                for i in range(len(v_locs)):
+                    ry, rx = v_locs[i, 0].item(), v_locs[i, 1].item()
+                    y0, y1 = max(0, ry - 1), min(H, ry + 2)
+                    x0, x1 = max(0, rx - 1), min(W, rx + 2)
+                    win = p_cloud[valid_idx][i, y0:y1, x0:x1]
+                    val = win.max() if v_labels[i] == 1.0 else win.mean()
+                    loss_sum += nn.functional.binary_cross_entropy(
+                        val.unsqueeze(0), v_labels[i].unsqueeze(0)
+                    )
+                loss_center = loss_sum / len(v_locs)
+
+            dice_w = train_cfg.dice_weight
+            loss = (1 - dice_w) * loss_ce + dice_w * loss_dice + \
+                   loss_height + train_cfg.weight_center * loss_center
+
             loss.backward()
             nn.utils.clip_grad_norm_(self.model.parameters(), train_cfg.grad_clip)
             self.optimizer.step()
@@ -107,9 +169,8 @@ class LossCorrectionTrainer:
             center = batch["center_label"].to(self.device)
 
             pred_logits, pred_hgt = self.model(x, moon_phase=moon, solar_zenith=sza)
-            # Use standard loss for validation (consistent comparison)
             loss, _, _, _ = self.criterion(
-                pred_logits, y_mask, radar_loc, center
+                pred_logits, pred_hgt, y_mask, y_height, radar_loc, center
             )
             v_loss += loss.item()
 
@@ -146,14 +207,13 @@ class LossCorrectionTrainer:
             self.setup()
 
         early_stop = EarlyStopping(patience=train_cfg.patience)
-        log_path = os.path.join(LOG_DIR, "loss_correction_train_log.txt")
+        log_path = os.path.join(LOG_DIR, "mixup_train_log.txt")
 
         with open(log_path, "w") as f:
             f.write("epoch,train_loss,val_loss,iou,f1,radar_acc,lr,time\n")
 
         print(f"\n{'='*50}")
-        print(f"  Loss Correction Training")
-        print(f"  Noise matrix shape: {self.transition_matrix.shape}")
+        print(f"  Mixup Training (alpha={self.alpha})")
         print(f"{'='*50}\n")
 
         for epoch in range(1, train_cfg.epochs + 1):
@@ -161,13 +221,14 @@ class LossCorrectionTrainer:
             train_loss = self.train_epoch(epoch)
             metrics = self.validate()
             elapsed = time.time() - t0
-            lr = self.optimizer.param_groups[0]["lr"]
 
+            lr = self.optimizer.param_groups[0]["lr"]
             print(
                 f"[{epoch:03d}] t={elapsed:.0f}s LR={lr:.1e} "
                 f"Train={train_loss:.4f} Val={metrics['loss']:.4f} "
                 f"IoU={metrics['iou']:.4f} F1={metrics['f1']:.4f} "
-                f"Radar={metrics['radar_acc']:.2%}"
+                f"Radar={metrics['radar_acc']:.2%} "
+                f"({metrics['correct']}/{metrics['total_radar']})"
             )
 
             with open(log_path, "a") as f:
@@ -178,17 +239,12 @@ class LossCorrectionTrainer:
             if metrics["loss"] < self.best_val_loss:
                 self.best_val_loss = metrics["loss"]
                 torch.save(self.model.state_dict(),
-                           os.path.join(CHECKPOINT_DIR, "loss_correction_best.pth"))
-                # Keep the best-val-loss weights so that the returned model is the
-                # same one written to disk. Previously the last-epoch weights were
-                # returned while the best-loss weights were saved, so the reported
-                # test metrics could not be reproduced from the checkpoint.
-                self.best_state = copy.deepcopy(self.model.state_dict())
+                           os.path.join(CHECKPOINT_DIR, "mixup_best.pth"))
+                print(f"  [*] Best model saved (val_loss={self.best_val_loss:.4f})")
 
             if early_stop.step(metrics["loss"]):
+                print(f"  Early stopping at epoch {epoch}")
                 break
 
         print(f"\nDone. Best val_loss={self.best_val_loss:.4f}")
-        if self.best_state is not None:
-            self.model.load_state_dict(self.best_state)
         return self.model, self.best_val_loss

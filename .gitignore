@@ -31,3 +31,14 @@ Thumbs.db
 
 # Paper (separate repo)
 paper/
+
+# Internal notes (not for public distribution)
+CONTEXT_REPORT.txt
+context_for_review.txt
+reviews.txt
+
+# Private debug scripts (use scripts/aggregate_* for the reproducible variants)
+scripts/_check_*.py
+scripts/_verify_*.py
+scripts/_warm_clouds.py
+scripts/test_coteaching_quick.py

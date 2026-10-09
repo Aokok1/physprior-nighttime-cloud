@@ -1,0 +1,276 @@
+{
+ "files": [
+  {
+   "path": "data/reference_labels.csv",
+   "bytes": 22699,
+   "sha256": "1edbe12786fbdd8da1abf1e7d50dded81b3316d88cc42ab7451973afd4743b23"
+  },
+  {
+   "path": "data\\sample_manifest_grp.csv",
+   "bytes": 542541,
+   "sha256": "dd384384a95cc0c7c69fd3d7e0944e495040984c692f1576cc9379bf7f9526ce"
+  },
+  {
+   "path": "data\\split_grp_manifest.json",
+   "bytes": 97384,
+   "sha256": "b83095ae29b3f33fad00e18c97bf2a85fc4b58a88214384e0ba7f0c6c40e0b59"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Changsha_Autumn.npz",
+   "bytes": 147599,
+   "sha256": "4c101c151df3dab1bff0715ddbe06d21ef18089cce8922bf1dd23a67f71f47bd"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Changsha_Spring.npz",
+   "bytes": 147647,
+   "sha256": "261c9eadd6bcf29848bf8323f9acbf42341c341b2756096161cf14288f208d26"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Changsha_Summer.npz",
+   "bytes": 145880,
+   "sha256": "7ca8e3d0f61d2c7b080c25ad7c5cd597235d9441da61ba7a300652555713c5b9"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Changsha_Winter.npz",
+   "bytes": 146760,
+   "sha256": "dd704b46dfa697c73432ec98faef43f1752a6b9ea3a169657dd6e693ab97c90d"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Longmen_Autumn.npz",
+   "bytes": 145542,
+   "sha256": "1a5fbde946fa336bbc85997f92c9d08f7fa960c306a0da8378ab8895ff2a92fc"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Longmen_Spring.npz",
+   "bytes": 145053,
+   "sha256": "08e460225ff91f16a8c7f7f1d777de64d214557aebca53fc10f7ed8f7a73a429"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Longmen_Summer.npz",
+   "bytes": 146929,
+   "sha256": "1eaef7e2b9e581df2600b6a50b67cfac41ca14a6fa46d294b9033c904355d30e"
+  },
+  {
+   "path": "basemap\\Super_Basemap_Longmen_Winter.npz",
+   "bytes": 146985,
+   "sha256": "6478e96787b7906100108487fae21701015ff3a2dbb85b13af0faf202510444c"
+  },
+  {
+   "path": "basemap\\basemap_provenance.json",
+   "bytes": 27920,
+   "sha256": "7a39efdb4183561ba6f281f2502284086aa3a7eb05a076f704fba45226ffa3ab"
+  },
+  {
+   "path": "predictions\\all_frozen_predictions_grp.json",
+   "bytes": 642433,
+   "sha256": "6407c782d9d731be8940bb5d631b0c5f1a95dd431868593c58c9cc0021dde69a"
+  },
+  {
+   "path": "predictions\\all_frozen_predictions_v2_grp.json",
+   "bytes": 645939,
+   "sha256": "85f2381ac7cd38dc2bbecb40ef2de1ac931aeb9b75b5c87a4672ed1094813d4b"
+  },
+  {
+   "path": "predictions\\paper_tables_grp.json",
+   "bytes": 17327,
+   "sha256": "8cd33b8376e5ace9cb5ffb8d2129f2fc19c3e99289c79417b35b494f1a6b0704"
+  },
+  {
+   "path": "predictions\\derived_tables_grp.json",
+   "bytes": 3152,
+   "sha256": "0a29285a607eb3fa782853d16b2faa9b78b9e360ba3c9d3e9b381df97595a70b"
+  },
+  {
+   "path": "predictions\\dev_threshold_grid_grp.json",
+   "bytes": 2346,
+   "sha256": "d43a28a8750308677f8561e9e58cc59bb7c1fd41540459faddf13b3b3a728e0c"
+  },
+  {
+   "path": "code\\determinism.py",
+   "bytes": 2300,
+   "sha256": "5bcf476f39cdbb7f426973962842e49a98d9e2e2fa2e9f36ef72af84b829e506"
+  },
+  {
+   "path": "code\\train.py",
+   "bytes": 11253,
+   "sha256": "262f9fdec6ddad181bc0202745b10d562d54b426f6e6b2779501c3b2d7b96486"
+  },
+  {
+   "path": "code\\config.py",
+   "bytes": 4693,
+   "sha256": "856d12f668f522ea442881df2845303c3e7b6c6e6a0621e320a402bcb549f7f5"
+  },
+  {
+   "path": "code\\data\\dataset.py",
+   "bytes": 10870,
+   "sha256": "96637d5d93cf8b3127ab87fc261a88d4f4fa400c1be9a1d3757aa28fde6373e5"
+  },
+  {
+   "path": "code\\data\\noise_analysis.py",
+   "bytes": 13647,
+   "sha256": "fc949a1d4082fcc05d59bebdba9fb21269c52217973ea7cef82b1ee228e04fd2"
+  },
+  {
+   "path": "code\\data\\__init__.py",
+   "bytes": 120,
+   "sha256": "b1b6b52d05e5a3b5e1e47b00ba37ae5fd110b10c4749cf28406e6a53ee00d66e"
+  },
+  {
+   "path": "code\\models\\mt_unet.py",
+   "bytes": 19499,
+   "sha256": "cabf79033258ecd1f64bb1e78e8112a75475ff65a6edb32772b0f4509808198c"
+  },
+  {
+   "path": "code\\models\\__init__.py",
+   "bytes": 38,
+   "sha256": "e0eff93960d45ef207857d66a2552d833ce75adbd3e32507c1492acc098fb96d"
+  },
+  {
+   "path": "code\\methods\\baseline.py",
+   "bytes": 8000,
+   "sha256": "4f41807af27c50b0edc3183a3f362dd77b9412bf07965d286faf13faed8bf08f"
+  },
+  {
+   "path": "code\\methods\\coteaching.py",
+   "bytes": 14595,
+   "sha256": "b457f48c75b70e791e45ea00ec273b3ceb1af64466326ffd29160ad02e3f1905"
+  },
+  {
+   "path": "code\\methods\\gce_baseline.py",
+   "bytes": 8482,
+   "sha256": "394028b62232d5035a114874f7af9ad2c7a151d3d5d0e3498a48dac6be7bcd7b"
+  },
+  {
+   "path": "code\\methods\\loss_correction.py",
+   "bytes": 7613,
+   "sha256": "57665f9f1de29d745befa5d7903d8a6385edc0d326265442bf94af5be7df3824"
+  },
+  {
+   "path": "code\\methods\\mixup.py",
+   "bytes": 10062,
+   "sha256": "7995c7b99cda49d23ee4c15aeb5bbf90ab8eabc73ac29f3416d77617ed4b84e4"
+  },
+  {
+   "path": "code\\methods\\physical_prior.py",
+   "bytes": 13946,
+   "sha256": "2509f216de47055cf2e21690103d05c8992e50a3532944cdda1e2eb879e8c277"
+  },
+  {
+   "path": "code\\methods\\physics_guided.py",
+   "bytes": 8479,
+   "sha256": "0002cb2ac1a8e986fc74105f3ca3855b5d903bffefb3b4cac5b252c16c60c269"
+  },
+  {
+   "path": "code\\methods\\selfie.py",
+   "bytes": 31767,
+   "sha256": "a5d156b700a84f26d432f5d0c614c2382bb2bc900aa9fe011e4cbcd524ea351d"
+  },
+  {
+   "path": "code\\methods\\__init__.py",
+   "bytes": 337,
+   "sha256": "bc1e70f7294839b49e99cd97f4296310f5d95496d4a94674c4e67699408c9a0d"
+  },
+  {
+   "path": "code\\scripts\\build_split_grp.py",
+   "bytes": 6716,
+   "sha256": "2b48e9d2208ae293c8938b563b4c5c025257d71e9065868b349848c85cc232db"
+  },
+  {
+   "path": "code\\scripts\\rebuild_basemap.py",
+   "bytes": 5249,
+   "sha256": "234ed222b5b3ba99229d3a3bc0e83f025f699693f6aa03afaf5511d3a9a809e1"
+  },
+  {
+   "path": "code\\scripts\\rebuild_paper_tables.py",
+   "bytes": 9356,
+   "sha256": "c68508935e4310b14756143971bf3b4fa154c94e335362a022f1ef6748dd9c99"
+  },
+  {
+   "path": "code\\scripts\\derive_station_season_tables.py",
+   "bytes": 6559,
+   "sha256": "ee5e2150b5d298a0b93adba4e4d1bce3b3a9950dc5c9373ad70c6c7c9998217d"
+  },
+  {
+   "path": "code\\scripts\\freeze_predictions_grp.py",
+   "bytes": 10548,
+   "sha256": "7ec4627e640d2da94236d1f51aece039bcfcfc5efcd2a4f15010897ab1c79ab0"
+  },
+  {
+   "path": "code\\scripts\\redo_loss_correction.py",
+   "bytes": 7555,
+   "sha256": "7bfdb8590cd0641e2a190503fa24e6ddcde90511dca845e66db24bac31d79fbe"
+  },
+  {
+   "path": "code\\scripts\\train_physprior_5seeds.py",
+   "bytes": 11734,
+   "sha256": "1ff058af65b3fccac6edc419ac318c4bfa7e2b8eaa84dcd60ca4e40f92bdfa5c"
+  },
+  {
+   "path": "code\\scripts\\train_coteaching_5seeds.py",
+   "bytes": 12020,
+   "sha256": "889abef61b09771d4b8841b4850d462e5f044077a2890f535d181a02f0b6553b"
+  },
+  {
+   "path": "code\\scripts\\train_2x2_ablation.py",
+   "bytes": 11945,
+   "sha256": "e18194c56ce0977087b22c65d03ee00bcc82d8bb7dd067bec24d104cb58df241"
+  },
+  {
+   "path": "code\\scripts\\train_physprior_coteaching_long.py",
+   "bytes": 13852,
+   "sha256": "b006f5333b3f31fb27efb706b6c9a8b599e0a4e261b64d9da409320641010b67"
+  },
+  {
+   "path": "code\\scripts\\rerun_grp.ps1",
+   "bytes": 4974,
+   "sha256": "9a394c5903941957a1ba1d2bffc66ba8dc5457e6f56305098784a41388c543e0"
+  },
+  {
+   "path": "code\\scripts\\verify_manuscript_numbers.py",
+   "bytes": 15646,
+   "sha256": "44c9602627efb5df67228caeec28612ce6ff0aebb95b442778349f29b281e997"
+  },
+  {
+   "path": "code\\scripts\\verify_reproducibility.py",
+   "bytes": 5693,
+   "sha256": "5b616711906a3657fc7f4400ceb109fa22e1cb59dc39acca28cdf78b0571c013"
+  },
+  {
+   "path": "code\\scripts\\verify_reproducibility.ps1",
+   "bytes": 2512,
+   "sha256": "0b01604c65690424a59ad3eab561a00b7d5b865aa1c6d8887bb3d3b9e65fae87"
+  },
+  {
+   "path": "code\\scripts\\independent_table_check.py",
+   "bytes": 7116,
+   "sha256": "9f91dd8445d7772544431e27935bdd0c9a607e1f3c72f70bdc4ee530cc6f942b"
+  },
+  {
+   "path": "code\\scripts\\audit_manuscript_numbers.py",
+   "bytes": 10728,
+   "sha256": "8a94d2d64ca9fd01cc14ce0eaa3569e8cc051e074bb80ea19e7a29e40306cfac"
+  },
+  {
+   "path": "code\\scripts\\probe_determinism.py",
+   "bytes": 2992,
+   "sha256": "5fecbdceb0514bee7933596f4c180519aaae66922dacbe35d976de99b4db2ec1"
+  },
+  {
+   "path": "code\\scripts\\make_fig1.py",
+   "bytes": 6467,
+   "sha256": "b116eb272de6cd3a4e32cf81dda86a05fb23ed8fb3c019c4ed33b936e5cee84b"
+  },
+  {
+   "path": "code\\scripts\\verify_fig1_caption.py",
+   "bytes": 2842,
+   "sha256": "3ad832133450ddecdf51a021d784e74a41996fa98a9e25cf4d49bad27a5fb63f"
+  },
+  {
+   "path": "code\\scripts\\dev_threshold_grid.py",
+   "bytes": 4455,
+   "sha256": "dcd2834d4583b22a8603fbd64f5d593e289dbbb0b466951cf4e39698c66c2e31"
+  }
+ ],
+ "n_files": 54,
+ "total_bytes": 3498796
+}
