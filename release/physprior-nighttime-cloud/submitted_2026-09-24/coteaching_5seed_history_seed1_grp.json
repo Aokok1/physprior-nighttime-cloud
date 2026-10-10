@@ -1,0 +1,7 @@
+{
+  "seed": 1,
+  "history": {},
+  "best_val_acc": 0.0,
+  "test_acc": 0.7461928934010152,
+  "best_epoch": 0
+}

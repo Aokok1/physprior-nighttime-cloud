@@ -28,7 +28,7 @@ changing 74 labels (62 corrections, 12 over-corrections).
 
 ## Released artefacts
 
-`release/physprior-nighttime-cloud/` (54 files, 3.3 MB) is the package that
+`release/physprior-nighttime-cloud/` (109 files, 6.2 MB) is the package that
 accompanies the manuscript:
 
 | Path | What it is |
@@ -39,7 +39,11 @@ accompanies the manuscript:
 | `basemap/*.npz` | the eight station-season DNB composites used as the third input channel |
 | `basemap/basemap_provenance.json` | which scenes entered each composite, under which criterion |
 | `predictions/all_frozen_predictions_grp.json` | per-sample predictions behind every row of Tables I-VI |
-| `predictions/paper_tables_grp.json`, `predictions/derived_tables_grp.json` | table-builder output (confusion matrices, intervals, rule-versus-model agreement) |
+| `predictions/paper_tables_grp.json`, `predictions/derived_tables_grp.json` | table-builder output: Table I, the two five-seed blocks, confusion matrices and intervals |
+| `predictions/label_source_paired_5seed_grp.json` | the paired label-source block (six cells x five seeds) |
+| `predictions/2x2_ablation_grp.json`, `predictions/m15_label_control_grp.json` | the channel x label cells and the frame-consistency isolation of supplementary S4 |
+| `predictions/*_history_seed*_grp.json` | per-seed training traces of supplementary S2 |
+| `submitted_2026-09-24/` | the artifacts as they stood at the previous submission, so the S4 before/after comparison can be reproduced |
 | `code/` | the correction rule, dataset loader, split builder, basemap builder, training entry points, table builders and verification gates |
 
 ### Reproducing the reported numbers

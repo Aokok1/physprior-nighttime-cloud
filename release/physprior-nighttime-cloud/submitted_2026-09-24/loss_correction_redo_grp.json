@@ -1,0 +1,11 @@
+{
+  "method": "Loss Correction (re-estimated)",
+  "n": 197,
+  "tp": 57,
+  "fp": 81,
+  "tn": 58,
+  "fn": 1,
+  "acc": 0.583756345177665,
+  "transition_matrix_source": "train_grp + val_grp radar samples (n=160)",
+  "old_acc": 0.619
+}

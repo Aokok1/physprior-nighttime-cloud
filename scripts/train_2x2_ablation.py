@@ -22,7 +22,7 @@ from data import make_dataloaders
 from data.dataset import CloudDataset
 from models.mt_unet import MT_UNet, MT_Loss
 from methods.baseline import EarlyStopping, compute_binary_metrics
-from methods.physical_prior import apply_physical_correction
+from methods.physical_prior import apply_physical_correction, correct_batch_labels
 
 
 def _split_dir(root, mode="Train"):
@@ -40,19 +40,15 @@ def _out_tag():
 DEVICE = "cuda"
 
 def apply_physprior_to_batch(batch):
-    fns = batch["filename"]
-    masks = batch["mask_noisy"]
-    corrected = []
-    for j, fn in enumerate(fns):
-        npz = np.load(os.path.join(_split_dir(MTUNET_DATASET, "Train"), fn))
-        m15 = npz.get("X_m15", npz.get("X_mod", None))
-        if m15 is None:
-            corrected.append(masks[j]); continue
-        c, _, _ = apply_physical_correction(
-            masks[j].cpu().numpy().astype(np.int32), m15,
-            m15_min=264.0, std_max=1.5)
-        corrected.append(torch.from_numpy(c).long())
-    return torch.stack(corrected)
+    """Correct this batch's labels with the deployed moderate preset.
+
+    Evaluated on batch["m15_raw"], the brightness temperature of the same scene
+    after the same geometric augmentation as batch["mask_noisy"]. It used to
+    read X_m15 from disk, which is untransformed: the flip set then matched the
+    corrected field with IoU 0.54 and changed 3.6% of the decisions at the
+    radar-collocated pixel. See methods.physical_prior.correct_batch_labels.
+    """
+    return correct_batch_labels(batch, m15_min=264.0, std_max=1.5)
 
 
 def train_one(label_mode, n_channels, max_epochs=20, patience=None):

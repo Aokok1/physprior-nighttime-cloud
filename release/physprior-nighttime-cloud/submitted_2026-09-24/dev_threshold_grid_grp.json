@@ -1,0 +1,135 @@
+{
+  "description": "PhysPrior threshold behaviour on the 160 radar-collocated development pixels",
+  "operator": "M15 at the radar pixel; 5x5 population std (ddof=0); flip when M15>=T_th and sigma<=sigma_th",
+  "n_pixels": 160,
+  "composition": {
+    "train_grp": 132,
+    "val_grp": 28
+  },
+  "stations": [
+    "CS"
+  ],
+  "cldmsk_cloud_pixels": 115,
+  "apparent_fp": 43,
+  "true_positive": 72,
+  "raw_cldmsk_accuracy": 0.63125,
+  "presets": {
+    "conservative": {
+      "flipped": 30,
+      "fp_recovered": 12,
+      "tp_lost": 18,
+      "accuracy": 0.59375,
+      "T_th": 266.0,
+      "sigma_th": 1.0
+    },
+    "moderate": {
+      "flipped": 48,
+      "fp_recovered": 18,
+      "tp_lost": 30,
+      "accuracy": 0.55625,
+      "T_th": 264.0,
+      "sigma_th": 1.5
+    },
+    "aggressive": {
+      "flipped": 57,
+      "fp_recovered": 23,
+      "tp_lost": 34,
+      "accuracy": 0.5625,
+      "T_th": 262.0,
+      "sigma_th": 2.0
+    }
+  },
+  "grid": {
+    "T_range": [
+      258,
+      260,
+      262,
+      264,
+      266,
+      268,
+      270,
+      272
+    ],
+    "S_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "matrix": [
+      [
+        0.60625,
+        0.58125,
+        0.54375,
+        0.55,
+        0.55625,
+        0.54375
+      ],
+      [
+        0.60625,
+        0.58125,
+        0.54375,
+        0.54375,
+        0.55,
+        0.5375
+      ],
+      [
+        0.625,
+        0.6,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.55
+      ],
+      [
+        0.625,
+        0.59375,
+        0.55625,
+        0.5625,
+        0.5625,
+        0.55
+      ],
+      [
+        0.625,
+        0.59375,
+        0.55625,
+        0.5625,
+        0.5625,
+        0.55
+      ],
+      [
+        0.625,
+        0.6,
+        0.56875,
+        0.58125,
+        0.58125,
+        0.56875
+      ],
+      [
+        0.63125,
+        0.60625,
+        0.58125,
+        0.59375,
+        0.59375,
+        0.58125
+      ],
+      [
+        0.625,
+        0.6,
+        0.58125,
+        0.59375,
+        0.59375,
+        0.58125
+      ]
+    ]
+  },
+  "grid_max": {
+    "acc": 0.63125,
+    "T": 270,
+    "sigma": 0.5
+  },
+  "grid_max_ties_raw": true,
+  "any_cell_beats_raw": false
+}

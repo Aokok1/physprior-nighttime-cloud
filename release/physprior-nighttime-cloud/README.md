@@ -3,7 +3,7 @@
 Artifacts for *Toward Improving Nighttime Cloud Detection Labels: A
 Physics-Guided One-Directional Correction Approach for VIIRS CLDMSK*.
 
-54 files, 3.5 MB.
+107 files, 6.4 MB.
 
 ## Contents
 
@@ -14,8 +14,13 @@ Physics-Guided One-Directional Correction Approach for VIIRS CLDMSK*.
 | `data/split_grp_manifest.json` | Split-construction record (seed, validation fraction, exclusion window, closure counts). |
 | `basemap/*.npz` | The eight station-season DNB composites used as the third input channel (2 stations x 4 seasons). |
 | `basemap/basemap_provenance.json` | Which scenes entered each composite, and under what criterion. |
-| `predictions/all_frozen_predictions_grp.json` | Per-sample predictions for every method row of Tables I-VI. Every reported metric and bootstrap interval is derived from this file. |
-| `predictions/paper_tables_grp.json`, `predictions/derived_tables_grp.json` | The table builder's output, including confusion matrices, intervals and the rule-versus-model agreement block. |
+| `predictions/all_frozen_predictions_grp.json` | Per-sample predictions for every method row of Table I. Every reported metric and bootstrap interval is derived from this file. |
+| `predictions/all_frozen_predictions_v2_grp.json` | The per-sample records behind the supplementary station, season and paired-label-source tables. |
+| `predictions/paper_tables_grp.json`, `predictions/derived_tables_grp.json` | The table builder's output: Table I, the two five-seed blocks, confusion matrices and intervals, and the S1.8 station/season tables. |
+| `predictions/label_source_paired_5seed_grp.json` | The paired label-source block of Table III (six cells x five seeds). |
+| `predictions/2x2_ablation_grp.json`, `predictions/m15_label_control_grp.json` | The channel x label cells and the S4.1 frame-consistency isolation. |
+| `predictions/*_history_seed*_grp.json`, `predictions/*_5seed_summary_grp.json` | The per-seed training traces of the supplementary S2. |
+| `submitted_2026-09-24/` | The artifacts as they stood at the previous submission, so the S4.3 before/after comparison can be reproduced. |
 | `code/` | Analysis code: the correction rule, the dataset loader, the split builder, the basemap builder, the training entry points, the table builders and the verification gates. |
 
 ## Reproducing the reported numbers

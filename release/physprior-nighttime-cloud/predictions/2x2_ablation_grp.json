@@ -1,0 +1,4042 @@
+[
+  {
+    "label_mode": "raw",
+    "n_channels": 2,
+    "best_val_acc": 0.75,
+    "best_epoch": 19,
+    "epochs_run": 20,
+    "selection": "final",
+    "test": {
+      "n": 197,
+      "tp": 54,
+      "fp": 102,
+      "tn": 37,
+      "fn": 4,
+      "acc": 0.4619289340101523,
+      "precision": 0.34615384615384615,
+      "recall": 0.9310344827586207,
+      "specificity": 0.26618705035971224,
+      "f1": 0.5046728971962617,
+      "balanced_accuracy": 0.5986107665591665,
+      "mcc": 0.22142237251685454
+    },
+    "test_records": [
+      {
+        "fname": "Tensor_Changsha_A2022024.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022025.1824.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022054.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024001.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024003.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024004.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024005.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025038.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025039.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025040.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025041.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025043.1836.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025044.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025045.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025046.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025047.1900.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025048.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025049.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025050.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025051.1748.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025052.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025053.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025054.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025055.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025056.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025057.1736.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1712.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1854.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025059.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020087.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020089.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020090.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020091.1754.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020092.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020100.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020101.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020102.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020103.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020105.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020106.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020107.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020108.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020109.1712.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020111.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020112.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020113.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020115.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020116.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020117.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020118.1748.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020119.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020121.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020122.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020123.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020124.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020125.1712.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020126.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020127.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020128.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020129.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020131.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020132.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020133.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020134.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020135.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020137.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020138.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020139.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020140.1736.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020141.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020142.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020143.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020144.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020145.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020147.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020150.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020151.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020158.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020159.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020160.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020165.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020166.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020167.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020168.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020169.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020170.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020171.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020172.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020176.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020177.1742.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020179.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020180.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020181.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020182.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020183.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020185.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020187.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020188.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020189.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020190.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020192.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020193.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020195.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020196.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020197.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020198.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020199.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020201.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020202.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020203.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020204.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020209.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020210.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020211.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020212.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020213.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020214.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020215.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020217.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020218.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020219.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020220.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020222.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020223.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020224.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020225.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020226.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020227.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020229.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020230.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020231.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020232.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020233.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020234.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020235.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020236.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020237.1718.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020238.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020239.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020241.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020242.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020243.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020244.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020245.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020246.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020247.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020248.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020249.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020251.1754.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020252.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020253.1718.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020254.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020255.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020256.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020257.1742.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020258.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020259.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020260.1824.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020261.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020262.1748.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020263.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020265.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020266.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020267.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020269.1718.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020270.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020271.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020272.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020273.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020274.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020275.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020276.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020277.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020278.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020279.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020281.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020282.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020283.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020284.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020285.1718.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020286.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020287.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020288.1800.npz",
+        "pred": 1,
+        "truth": 1
+      }
+    ],
+    "label": "A: Raw CLDMSK + 2ch (DNB+M15)"
+  },
+  {
+    "label_mode": "raw",
+    "n_channels": 3,
+    "best_val_acc": 0.6785714285714286,
+    "best_epoch": 11,
+    "epochs_run": 20,
+    "selection": "final",
+    "test": {
+      "n": 197,
+      "tp": 56,
+      "fp": 105,
+      "tn": 34,
+      "fn": 2,
+      "acc": 0.45685279187817257,
+      "precision": 0.34782608695652173,
+      "recall": 0.9655172413793104,
+      "specificity": 0.2446043165467626,
+      "f1": 0.5114155251141553,
+      "balanced_accuracy": 0.6050607789630364,
+      "mcc": 0.24781513148686507
+    },
+    "test_records": [
+      {
+        "fname": "Tensor_Changsha_A2022024.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022025.1824.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022054.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024001.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024003.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024004.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024005.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025038.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025039.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025040.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025041.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025043.1836.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025044.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025045.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025046.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025047.1900.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025048.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025049.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025050.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025051.1748.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025052.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025053.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025054.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025055.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025056.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025057.1736.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1712.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1854.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025059.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020087.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020089.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020090.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020091.1754.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020092.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020100.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020101.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020102.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020103.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020105.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020106.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020107.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020108.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020109.1712.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020111.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020112.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020113.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020115.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020116.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020117.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020118.1748.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020119.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020121.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020122.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020123.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020124.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020125.1712.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020126.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020127.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020128.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020129.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020131.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020132.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020133.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020134.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020135.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020137.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020138.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020139.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020140.1736.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020141.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020142.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020143.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020144.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020145.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020147.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020150.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020151.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020158.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020159.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020160.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020165.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020166.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020167.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020168.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020169.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020170.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020171.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020172.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020176.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020177.1742.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020179.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020180.1824.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020181.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020182.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020183.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020185.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020187.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020188.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020189.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020190.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020192.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020193.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020195.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020196.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020197.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020198.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020199.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020201.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020202.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020203.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020204.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020209.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020210.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020211.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020212.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020213.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020214.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020215.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020217.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020218.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020219.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020220.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020222.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020223.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020224.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020225.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020226.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020227.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020229.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020230.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020231.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020232.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020233.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020234.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020235.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020236.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020237.1718.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020238.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020239.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020241.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020242.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020243.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020244.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020245.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020246.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020247.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020248.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020249.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020251.1754.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020252.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020253.1718.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020254.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020255.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020256.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020257.1742.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020258.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020259.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020260.1824.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020261.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020262.1748.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020263.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020265.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020266.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020267.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020269.1718.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020270.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020271.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020272.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020273.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020274.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020275.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020276.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020277.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020278.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020279.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020281.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020282.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020283.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020284.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020285.1718.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020286.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020287.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020288.1800.npz",
+        "pred": 1,
+        "truth": 1
+      }
+    ],
+    "label": "B: Raw CLDMSK + 3ch (DNB+Basemap+M15)"
+  },
+  {
+    "label_mode": "physprior",
+    "n_channels": 2,
+    "best_val_acc": 0.6071428571428571,
+    "best_epoch": 9,
+    "epochs_run": 20,
+    "selection": "final",
+    "test": {
+      "n": 197,
+      "tp": 45,
+      "fp": 51,
+      "tn": 88,
+      "fn": 13,
+      "acc": 0.6751269035532995,
+      "precision": 0.46875,
+      "recall": 0.7758620689655172,
+      "specificity": 0.6330935251798561,
+      "f1": 0.5844155844155844,
+      "balanced_accuracy": 0.7044777970726867,
+      "mcc": 0.3729076105475176
+    },
+    "test_records": [
+      {
+        "fname": "Tensor_Changsha_A2022024.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022025.1824.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022054.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024001.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024003.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024004.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024005.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025038.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025039.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025040.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025041.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025043.1836.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025044.1818.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025045.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025046.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025047.1900.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025048.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025049.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025050.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025051.1748.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025052.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025053.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025054.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025055.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025056.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025057.1736.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1712.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1854.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025059.1836.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020087.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020089.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020090.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020091.1754.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020092.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020100.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020101.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020102.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020103.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020105.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020106.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020107.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020108.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020109.1712.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020111.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020112.1800.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020113.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020115.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020116.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020117.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020118.1748.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020119.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020121.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020122.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020123.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020124.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020125.1712.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020126.1836.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020127.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020128.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020129.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020131.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020132.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020133.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020134.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020135.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020137.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020138.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020139.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020140.1736.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020141.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020142.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020143.1818.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020144.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020145.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020147.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020150.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020151.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020158.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020159.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020160.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020165.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020166.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020167.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020168.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020169.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020170.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020171.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020172.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020176.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020177.1742.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020179.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020180.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020181.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020182.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020183.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020185.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020187.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020188.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020189.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020190.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020192.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020193.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020195.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020196.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020197.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020198.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020199.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020201.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020202.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020203.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020204.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020209.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020210.1724.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020211.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020212.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020213.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020214.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020215.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020217.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020218.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020219.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020220.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020222.1836.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020223.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020224.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020225.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020226.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020227.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020229.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020230.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020231.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020232.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020233.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020234.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020235.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020236.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020237.1718.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020238.1836.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020239.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020241.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020242.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020243.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020244.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020245.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020246.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020247.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020248.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020249.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020251.1754.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020252.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020253.1718.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020254.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020255.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020256.1800.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020257.1742.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020258.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020259.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020260.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020261.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020262.1748.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020263.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020265.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020266.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020267.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020269.1718.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020270.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020271.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020272.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020273.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020274.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020275.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020276.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020277.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020278.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020279.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020281.1830.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020282.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020283.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020284.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020285.1718.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020286.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020287.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020288.1800.npz",
+        "pred": 1,
+        "truth": 1
+      }
+    ],
+    "label": "C: PhysPrior labels + 2ch (DNB+M15)"
+  },
+  {
+    "label_mode": "physprior",
+    "n_channels": 3,
+    "best_val_acc": 0.7142857142857143,
+    "best_epoch": 6,
+    "epochs_run": 20,
+    "selection": "final",
+    "test": {
+      "n": 197,
+      "tp": 47,
+      "fp": 47,
+      "tn": 92,
+      "fn": 11,
+      "acc": 0.7055837563451777,
+      "precision": 0.5,
+      "recall": 0.8103448275862069,
+      "specificity": 0.6618705035971223,
+      "f1": 0.618421052631579,
+      "balanced_accuracy": 0.7361076655916645,
+      "mcc": 0.43090242754854774
+    },
+    "test_records": [
+      {
+        "fname": "Tensor_Changsha_A2022024.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022025.1824.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2022054.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024001.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024003.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024004.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2024005.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025038.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025039.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025040.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025041.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025043.1836.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025044.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025045.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025046.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025047.1900.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025048.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025049.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025050.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025051.1748.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025052.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025053.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025054.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025055.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025056.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025057.1736.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1712.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025058.1854.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Changsha_A2025059.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020087.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020088.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020089.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020090.1812.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020091.1754.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020092.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020100.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020101.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020102.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020103.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020104.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020105.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020106.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020107.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020108.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020109.1712.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020111.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020112.1800.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020113.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020115.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020116.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020117.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020118.1748.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020119.1730.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020121.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020122.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020123.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020124.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020125.1712.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020126.1836.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020127.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020128.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020129.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020131.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020132.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020133.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020134.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020135.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020136.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020137.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020138.1812.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020139.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020140.1736.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020141.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020142.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020143.1818.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020144.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020145.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020147.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020150.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020151.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020152.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020158.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020159.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020160.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020165.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020166.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020167.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020168.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020169.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020170.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020171.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020172.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020176.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020177.1742.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020179.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020180.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020181.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020182.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020183.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1706.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020184.1848.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020185.1830.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020187.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020188.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020189.1712.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020190.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020192.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020193.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020195.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020196.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020197.1806.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020198.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020199.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1706.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020200.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020201.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020202.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020203.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020204.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020209.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020210.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020211.1842.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020212.1824.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020213.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020214.1748.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020215.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1706.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020216.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020217.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020218.1812.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020219.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020220.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020222.1836.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020223.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020224.1800.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020225.1742.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020226.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020227.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020229.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020230.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020231.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020232.1848.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020233.1830.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020234.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020235.1754.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020236.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020237.1718.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020238.1836.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020239.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020241.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020242.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020243.1842.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020244.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020245.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020246.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020247.1730.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020248.1848.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020249.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020251.1754.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020252.1736.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020253.1718.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020254.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020255.1818.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020256.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020257.1742.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020258.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020259.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020260.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020261.1806.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020262.1748.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020263.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020265.1830.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020266.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020267.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020269.1718.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020270.1836.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020271.1818.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020272.1800.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020273.1742.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020274.1724.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020275.1842.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020276.1824.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020277.1806.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020278.1748.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020279.1730.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020281.1830.npz",
+        "pred": 0,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020282.1812.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020283.1754.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020284.1736.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020285.1718.npz",
+        "pred": 0,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020286.1836.npz",
+        "pred": 1,
+        "truth": 0
+      },
+      {
+        "fname": "Tensor_Longmen_A2020287.1818.npz",
+        "pred": 1,
+        "truth": 1
+      },
+      {
+        "fname": "Tensor_Longmen_A2020288.1800.npz",
+        "pred": 1,
+        "truth": 1
+      }
+    ],
+    "label": "D: PhysPrior labels + 3ch (DNB+Basemap+M15)"
+  }
+]

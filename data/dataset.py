@@ -133,8 +133,15 @@ class CloudDataset(Dataset):
         return len(self.file_list)
 
     def _augment(self, x_norm, bm_norm, mod_norm, y_mask, y_height,
-                 ry, rx):
-        """Same augmentations as MT-UNet step4."""
+                 ry, rx, m15_raw=None):
+        """Same augmentations as MT-UNet step4.
+
+        `m15_raw` is the un-normalised M15 brightness temperature of the same
+        scene. It undergoes the geometric transforms only — never the radiance
+        noise or the scale factor — because it is a label-side quantity: the
+        physical prior compares its values against absolute thresholds (264 K,
+        1.5 K of local scatter), which the input-side perturbation would move.
+        """
         N = IMG_SIZE
 
         if random.random() > 0.5:
@@ -156,6 +163,7 @@ class CloudDataset(Dataset):
             mod_norm = np.fliplr(mod_norm)
             y_mask = np.fliplr(y_mask)
             y_height = np.fliplr(y_height)
+            m15_raw = np.fliplr(m15_raw)
             rx = N - 1 - rx
 
         if random.random() > 0.5:
@@ -164,6 +172,7 @@ class CloudDataset(Dataset):
             mod_norm = np.flipud(mod_norm)
             y_mask = np.flipud(y_mask)
             y_height = np.flipud(y_height)
+            m15_raw = np.flipud(m15_raw)
             ry = N - 1 - ry
 
         k = random.randint(0, 3)
@@ -173,11 +182,19 @@ class CloudDataset(Dataset):
             mod_norm = np.rot90(mod_norm)
             y_mask = np.rot90(y_mask)
             y_height = np.rot90(y_height)
-            ry, rx = rx, N - 1 - ry
+            m15_raw = np.rot90(m15_raw)
+            # np.rot90 is counter-clockwise: the value at (r, c) moves to
+            # (N-1-c, r). The previous bookkeeping used the clockwise mapping
+            # (c, N-1-r), which agrees only for k = 0 and k = 2, so for half of
+            # all training views radar_loc pointed at the wrong pixel of the
+            # rotated patch and the centre-pixel supervision (loss weight 5.0)
+            # and the height target were anchored to a neighbour. Measured on
+            # the raw M15 field: 1.4% of k=1 views held the correct value.
+            ry, rx = N - 1 - rx, ry
 
         ry = int(np.clip(ry, 0, N - 1))
         rx = int(np.clip(rx, 0, N - 1))
-        return x_norm, bm_norm, mod_norm, y_mask, y_height, ry, rx
+        return x_norm, bm_norm, mod_norm, y_mask, y_height, m15_raw, ry, rx
 
     def __getitem__(self, idx):
         data = np.load(self.file_list[idx])
@@ -204,11 +221,15 @@ class CloudDataset(Dataset):
         mod_norm = _bt_norm(x_mod)
         y_height_norm = y_height / 15000.0
         y_height_clean = np.nan_to_num(y_height_norm, nan=-1.0)
+        # Label-side copy of the same field: raw brightness temperature, no
+        # nan_to_num and no radiance noise, geometrically kept in step with
+        # y_mask so a physical prior applied to it is applied to the right pixel.
+        m15_raw = np.squeeze(np.asarray(x_mod, dtype=np.float32)).copy()
 
         # Augment
         if self.augment:
-            x_norm, bm_norm, mod_norm, y_mask, y_height_clean, ry, rx = self._augment(
-                x_norm, bm_norm, mod_norm, y_mask, y_height_clean, ry, rx
+            x_norm, bm_norm, mod_norm, y_mask, y_height_clean, m15_raw, ry, rx = self._augment(
+                x_norm, bm_norm, mod_norm, y_mask, y_height_clean, ry, rx, m15_raw
             )
 
         # Build tensors
@@ -225,6 +246,7 @@ class CloudDataset(Dataset):
             "image": image,
             "mask_noisy": torch.from_numpy(y_mask.copy()).long(),
             "mask_noisy_soft": torch.from_numpy(y_mask.copy()).long(),
+            "m15_raw": torch.from_numpy(np.ascontiguousarray(m15_raw)).float(),
             "height": torch.from_numpy(y_height_clean.copy()).unsqueeze(0).float(),
             "center_label": center_label,
             "radar_loc": torch.tensor([ry, rx], dtype=torch.long),

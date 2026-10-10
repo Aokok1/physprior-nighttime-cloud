@@ -149,6 +149,69 @@ n_clear = sum(1 for r in man if r["split"] == "test" and float(r["radar_label"])
 add(n_clear, "manifest:test.clear", nd=(0,))
 add(197 - n_clear, "manifest:test.cloud", nd=(0,))
 
+# Paired-seed label-source block (manuscript Table III and the abstract/intro
+# restatements). The frozen-prediction pool above does not read this artifact, so
+# without it the per-cell means and seed spreads count as unmatched figures.
+import statistics as _stats
+try:
+    _paired = load(f"output/label_source_paired_5seed{SUF}.json")
+except Exception:
+    _paired = []
+_man_by = {r["fname"]: r for r in man}
+
+
+def _sd(v, pop=True):
+    if len(v) < 2:
+        return 0.0
+    s = _stats.stdev(v)
+    return s * ((len(v) - 1) / len(v)) ** 0.5 if pop else s
+
+
+for _mode in ("raw", "physprior", "m15thresh"):
+    for _ch in (2, 3):
+        _runs = [r for r in _paired if r["label_mode"] == _mode and r["n_channels"] == _ch]
+        if not _runs:
+            continue
+        _src = f"paired:{_mode}{_ch}ch"
+        for _key in ("acc", "balanced_accuracy", "recall", "specificity", "f1"):
+            _vals = [r["test"][_key] / 100.0 for r in _runs]   # pool stores fractions
+            add(sum(_vals) / len(_vals), f"{_src}.{_key}.mean", nd=(0, 1, 2))
+            add(_sd(_vals), f"{_src}.{_key}.sd_pop", nd=(0, 1, 2))
+            add(_sd(_vals, pop=False), f"{_src}.{_key}.sd_sample", nd=(0, 1, 2))
+        for _r in _runs:
+            add(_r["test"]["acc"] / 100.0, f"{_src}.per_seed", nd=(0, 1, 2))
+        _warm = {d["fname"] for d in _runs[0]["test_records"]
+                 if d["truth"] == 1 and float(_man_by[d["fname"]]["m15_at_radar"]) >= 264.0}
+        _cnt = [sum(1 for d in r["test_records"] if d["fname"] in _warm and d["pred"] == 1)
+                for r in _runs]
+        add(sum(_cnt) / len(_cnt), f"{_src}.warm.mean", nd=(0, 1))
+        add(_sd(_cnt), f"{_src}.warm.sd_pop", nd=(0, 1))
+        add(_sd(_cnt, pop=False), f"{_src}.warm.sd_sample", nd=(0, 1))
+
+# paired per-seed differences: the three label-source contrasts printed as effect rows
+for _a, _b, _tag in (("physprior", "raw", "corr_minus_raw"),
+                     ("m15thresh", "physprior", "thr_minus_corr"),
+                     ("m15thresh", "raw", "thr_minus_raw")):
+    for _ch in (2, 3):
+        _da = {r["seed"]: r["test"]["acc"] for r in _paired
+               if r["label_mode"] == _a and r["n_channels"] == _ch}
+        _db = {r["seed"]: r["test"]["acc"] for r in _paired
+               if r["label_mode"] == _b and r["n_channels"] == _ch}
+        _d = [abs(_da[s] - _db[s]) / 100.0 for s in sorted(set(_da) & set(_db))]
+        if _d:
+            add(sum(_d) / len(_d), f"paired_effect:{_tag}{_ch}ch.mean", nd=(0, 1, 2))
+            add(_sd(_d), f"paired_effect:{_tag}{_ch}ch.sd_pop", nd=(0, 1, 2))
+            add(_sd(_d, pop=False), f"paired_effect:{_tag}{_ch}ch.sd_sample", nd=(0, 1, 2))
+    # basemap effect within each label source (3ch minus 2ch, per seed)
+for _mode in ("raw", "physprior", "m15thresh"):
+    _2 = {r["seed"]: r["test"]["acc"] for r in _paired if r["label_mode"] == _mode and r["n_channels"] == 2}
+    _3 = {r["seed"]: r["test"]["acc"] for r in _paired if r["label_mode"] == _mode and r["n_channels"] == 3}
+    _d = [abs(_3[s] - _2[s]) / 100.0 for s in sorted(set(_2) & set(_3))]
+    if _d:
+        add(sum(_d) / len(_d), f"paired_effect:basemap_{_mode}.mean", nd=(0, 1, 2))
+        add(_sd(_d), f"paired_effect:basemap_{_mode}.sd_pop", nd=(0, 1, 2))
+        add(_sd(_d, pop=False), f"paired_effect:basemap_{_mode}.sd_sample", nd=(0, 1, 2))
+
 # ---- development-set threshold behaviour -----------------------------------
 # These are the numbers section II-B and supplementary S1 quote about the 160
 # radar-collocated development pixels; they come from a released artifact rather

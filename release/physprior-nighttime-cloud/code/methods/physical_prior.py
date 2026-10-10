@@ -91,6 +91,53 @@ def apply_physical_correction(
     return corrected, int(correction_mask.sum()), correction_mask
 
 
+def correct_batch_labels(batch, m15_min=None, std_max=None, preset=None):
+    """Apply the one-directional prior inside the batch's own frame.
+
+    `batch["mask_noisy"]` has already been flipped/rotated by the loader, so the
+    prior must be evaluated on `batch["m15_raw"]` — the un-normalised brightness
+    temperature of that same, transformed scene. Reading M15 from disk instead
+    compares a label at transformed coordinates against a radiance at
+    untransformed coordinates (measured flip-set IoU 0.54 over the patch; 3.6%
+    of the decisions change at the radar-collocated pixel, which sits at the
+    patch centre for almost every sample).
+
+    Returns a long tensor of corrected labels with the shape of mask_noisy.
+    """
+    if preset is not None:
+        p = PRESETS[preset]
+        m15_min, std_max = p["m15_min"], p["std_max"]
+    if m15_min is None or std_max is None:
+        raise ValueError("correct_batch_labels needs m15_min and std_max, or a preset")
+    if "m15_raw" not in batch:
+        raise KeyError(
+            "batch has no 'm15_raw'; the loader must come from data.dataset.CloudDataset, "
+            "which emits the raw M15 field through the geometric augmentations")
+    masks = batch["mask_noisy"].numpy()
+    fields = batch["m15_raw"].numpy()
+    out = []
+    for j in range(masks.shape[0]):
+        corr, _, _ = apply_physical_correction(
+            masks[j].astype(np.int32), fields[j],
+            m15_min=float(m15_min), std_max=float(std_max))
+        out.append(torch.from_numpy(corr).long())
+    return torch.stack(out)
+
+
+def threshold_label_field(batch, m15_min=264.0, cloudy_class=3, clear_class=0):
+    """Label field defined by the warm-pixel threshold alone.
+
+    Control used to ask whether the corrected product label is a better training
+    signal than the threshold mask: it replaces the whole CLDMSK field rather
+    than editing it, so it is not one-directional and it carries nothing the
+    threshold itself does not have.
+    """
+    fields = batch["m15_raw"].numpy()
+    return torch.stack([torch.from_numpy(
+        np.where(f >= float(m15_min), clear_class, cloudy_class).astype(np.int64))
+        for f in fields])
+
+
 class PhysicalPriorCorrector:
     """Pre-process labels with physical constraints, then train normally.
 
@@ -131,17 +178,18 @@ class PhysicalPriorCorrector:
         class_total = {c: 0 for c in range(4)}
 
         for mode in ["Train", "Test"]:
-            ds = CloudDataset(MTUNET_DATASET, mode, augment=False)
+            # use_phase4=True routes Train through NL_SPLIT_TAG (Train_grp),
+            # which is the split every other stage of this pipeline trains on.
+            ds = CloudDataset(MTUNET_DATASET, mode, augment=False,
+                              use_phase4=True)
             for i in range(len(ds)):
                 sample = ds[i]
                 fname = sample["filename"]
                 cldmsk = sample["mask_noisy"].numpy().astype(np.int32)
 
-                # Load M15 directly from npz (not through dataset normalization)
-                npz_path = os.path.join(MTUNET_DATASET, mode, fname)
-                data = np.load(npz_path)
-                m15 = data.get("X_m15", data.get("X_mod", None))
-                if m15 is None:
+                # Raw brightness temperature in the same frame as the label field
+                m15 = sample["m15_raw"].numpy()
+                if np.isnan(m15).all():
                     continue
 
                 corrected, n_corr, corr_mask = apply_physical_correction(
@@ -211,23 +259,11 @@ class PhysicalPriorCorrector:
             center = batch["center_label"].to(self.device)
             y_height = batch["height"].to(self.device)
 
-            # Apply physical correction on-the-fly to this batch's labels
-            y_mask_orig = batch["mask_noisy"].numpy()
-            filenames = batch["filename"]
-            corrected_batch = []
-            for j, fn in enumerate(filenames):
-                npz_path = os.path.join(MTUNET_DATASET, "Train", fn)
-                data = np.load(npz_path)
-                m15 = data.get("X_m15", data.get("X_mod", None))
-                if m15 is not None:
-                    corr, _, _ = apply_physical_correction(
-                        y_mask_orig[j].astype(np.int32), m15,
-                        m15_min=self.m15_min, std_max=self.std_max,
-                    )
-                else:
-                    corr = y_mask_orig[j]
-                corrected_batch.append(torch.from_numpy(corr).long())
-            y_mask = torch.stack(corrected_batch).to(self.device)
+            # Apply the physical correction on-the-fly, inside this batch's own
+            # (augmented) frame: mask and brightness temperature are transformed
+            # together by CloudDataset, so no disk read is needed here.
+            y_mask = correct_batch_labels(
+                batch, m15_min=self.m15_min, std_max=self.std_max).to(self.device)
 
             self.optimizer.zero_grad()
             pred_mask, pred_hgt = self.model(x, moon_phase=moon, solar_zenith=sza)
